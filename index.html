@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Лр </title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+    .task { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+    button { padding: 6px 12px; margin: 5px 5px 5px 0; cursor: pointer; }
+    input[type="text"] { padding: 4px; width: 200px; }
+    .row { margin: 4px 0; }
+    .row label { display: inline-block; width: 220px; }
+    .ok { color: green; }
+    .bad { color: red; }
+    #radioOptions label { display: block; cursor: pointer; }
+
+    /* Ротатор */
+    #rotator { width: 640px; max-width: 100%; border: 1px solid #ddd; display: grid;
+        grid-template-columns: 70px 1fr 70px; grid-template-rows: auto 380px auto; }
+    #rotator a { color: #339; cursor: pointer; text-decoration: underline; }
+
+    /* Капча */
+    #captcha { margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<h2>Гаврилюк Мар'ян №1</h2>
+
+<div class="task">
+    <h3>1. Температура: Фаренгейт ↔ Цельсій</h3>
+    <div class="row"><label for="fahr">Температура за Фаренгейтом</label><input type="text" id="fahr"></div>
+    <div class="row"><label for="cels">Температура за Цельсієм</label><input type="text" id="cels"></div>
+</div>
+
+<div class="task">
+    <h3>2. Таблиця множення (поле вводу)</h3>
+    <div id="score2"></div>
+    <button id="next2">наступне завдання</button>
+    <div class="row">
+        <span id="question2"></span>
+        <input type="text" id="answer2">
+        <button id="check2">перевірити</button>
+    </div>
+    <div id="result2"></div>
+</div>
+
+<div class="task">
+    <h3>3. Таблиця множення (радіокнопки)</h3>
+    <div id="score3"></div>
+    <button id="next3">наступне завдання</button>
+    <div id="question3"></div>
+    <div id="radioOptions"></div>
+    <div id="result3"></div>
+</div>
+
+<div class="task">
+    <h3>4. Ротатор зображень (Автомобілі)</h3>
+    <div id="rotator"></div>
+</div>
+
+<div class="task">
+    <h3>5. Captcha</h3>
+    <div>Введіть число</div>
+    <div id="captcha"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
